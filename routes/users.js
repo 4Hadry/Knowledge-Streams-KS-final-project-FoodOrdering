@@ -1,8 +1,9 @@
 var express = require("express");
-const getAllData = require("../controller/foodController.js");
+const { createUser, Login } = require("../controller/userController.js");
 var router = express.Router();
 
 /* GET users listing. */
-router.get("/", getAllData);
+router.post("/signup", createUser);
+router.post("/signin", Login);
 
 module.exports = router;
