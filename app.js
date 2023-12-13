@@ -26,13 +26,13 @@ mongoose
   });
 
 var app = express();
-const corsConfig = {
-  origin: true,
-  credentials: true,
-};
+// const corsConfig = {
+//   origin: true,
+//   credentials: true,
+// };
 
-app.use(cors(corsConfig));
-app.options("*", cors(corsConfig));
+app.use(cors());
+// app.options("*", cors(corsConfig));
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
