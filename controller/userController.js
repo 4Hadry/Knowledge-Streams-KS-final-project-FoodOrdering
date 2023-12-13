@@ -1,5 +1,3 @@
-// const Users = require("../Models/userSceema.js");
-
 const jwt = require("jsonwebtoken");
 const users = require("../Models/usersceema");
 const bcrypt = require("bcryptjs");

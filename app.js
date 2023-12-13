@@ -16,25 +16,15 @@ mongoose
   .connect(mongoUri)
   .then(async () => {
     console.log("Connect to Mongoose");
-    // const fetched_data = await mongoose.connection.db.collection("food_item");
-    // console.log(fetched_data);
-    // const data = fetched_data.find({});
-    // console.log(data);
   })
   .catch((err) => {
     console.log(err);
   });
 
 var app = express();
-// const corsConfig = {
-//   origin: true,
-//   credentials: true,
-// };
 
 app.use(cors());
-// app.options("*", cors(corsConfig));
 
-// view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
@@ -49,18 +39,13 @@ app.use("/users", usersRouter);
 app.use("/foods", foodRouter);
 app.use(cors());
 
-// catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
 });
 
-// error handler
 app.use(function (err, req, res, next) {
-  // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get("env") === "development" ? err : {};
-
-  // render the error page
   res.status(err.status || 500);
   res.render("error");
 });
