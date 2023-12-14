@@ -2,6 +2,8 @@ const { mongoose } = require("mongoose");
 mongoose;
 const foodSchema = new mongoose.Schema(
   {
+
+    
     name: {
       type: String,
     },
@@ -20,6 +22,7 @@ const foodSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
+
 
 const food = mongoose.model("food_items", foodSchema);
 module.exports = food;
