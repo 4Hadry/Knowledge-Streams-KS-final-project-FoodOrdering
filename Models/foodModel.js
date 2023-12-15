@@ -9,6 +9,9 @@ const foodSchema = new mongoose.Schema(
       type: String,
       //   required: true,
     },
+    Catagoryname: {
+      type: String,
+    },
     description: {
       type: String,
       //   required: true,
