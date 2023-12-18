@@ -1,13 +1,3 @@
-// var express = require("express");
-// const { createUser, Login } = require("../controller/userController.js");
-// var router = express.Router();
-
-// /* GET users listing. */
-// router.post("/signup", createUser);
-// router.post("/signin", Login);
-
-// module.exports = router;
-
 var express = require("express");
 const {
   createUser,
@@ -15,6 +5,8 @@ const {
   getUserProfile,
 } = require("../controller/userController.js");
 // const { authenticateToken } = require("../controller/authenticateToken.js");
+const { createUser, login } = require("../controller/userController.js");
+
 var router = express.Router();
 
 router.post("/signup", createUser);
