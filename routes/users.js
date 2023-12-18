@@ -14,11 +14,11 @@ const {
   login,
   getUserProfile,
 } = require("../controller/userController.js");
-const { authenticateToken } = require("../controller/authenticateToken.js");
+// const { authenticateToken } = require("../controller/authenticateToken.js");
 var router = express.Router();
 
 router.post("/signup", createUser);
 router.post("/signin", login);
-router.get("/profile", authenticateToken, getUserProfile);
+router.get("/profile", getUserProfile);
 
 module.exports = router;

@@ -84,8 +84,8 @@ const login = async (req, res) => {
 
 const getUserProfile = async (req, res) => {
   try {
-    console.log(req.user);
-    const userId = req.user.id;
+    console.log(req);
+    const userId = req.users._id;
     const userProfile = await users.findById(userId);
 
     if (!userProfile) {
